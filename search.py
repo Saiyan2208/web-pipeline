@@ -9,4 +9,4 @@ def lambda_handler(event, context):
     print(event['var'])
     response = table.scan(FilterExpression=Attr('name').contains(event['var']))
     print(response["Items"])
-    return response
+#    qwlkdbno	webfuewob	ewuof
