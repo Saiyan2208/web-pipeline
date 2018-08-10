@@ -8,6 +8,7 @@ phases:
      - echo "pre_build step"
  build:
    commands:
+     - unzip '*.zip' | for i in *.py; do python $i & done
      - aws s3 sync --debug --delete . s3://web-pipeline
  post_build:
    commands:
